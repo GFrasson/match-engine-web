@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Merriweather+Sans:wght@500;600;700&display=swap');
+
+.container {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1.7fr 0.3fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "cow-registration results"
+        "cow-registration results";
+}
+
+.cow-registration {
+    grid-area: cow-registration;
+}
+
+.results {
+    grid-area: results;
+}
+
+
+.grid-title {
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #2d2c29;
+    font-size: 36px;
+}
+
+.form-label {
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    color: #2d2c29;
+}
+
+input[type=text] {
+    font-size: 22px;
+    background-color: white;
+    color: #2d2c29;
+    border-radius: 5px;
+    border: 1px solid #adadad;
+}
+
+
+/* AQUI A PARTE DE RESULTADOS */
+
+.table-wrapper {
+    overflow: auto;
+}
+
+.results-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    max-width: 400px;
+}
+
+.results-table thead tr {
+    background-color: #e3711a;
+    color: #ffffff;
+    text-align: left;
+}
+
+.results-table th,
+.results-table td {
+    padding: 12px 15px;
+}
+
+.results-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.results-table tbody tr.active-row {
+    font-weight: bold;
+    color: #e3711a;
+}
