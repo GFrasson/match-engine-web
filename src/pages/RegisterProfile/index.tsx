@@ -1,138 +1,137 @@
 import "./styles.css";
 import { Navbar } from '../../components/Navbar/index';
+import Select from 'react-select';
 
 export function RegisterProfile() {
+
+    const optionsSelect = [
+        { value: '>', label: '>' },
+        { value: '>=', label: '>=' },
+        { value: '<', label: '<' },
+        { value: '<=', label: '<=' },
+        { value: '=', label: '=' }
+      ]
+
+      
     return (
         <div className="App">
             <Navbar/>
             <div className="container">
-                <div className="cow-registration">
-                <h1 className="grid-title">Informações da vaca</h1>
+                <div className="profile-registration">
+                <h1 className="grid-title">Informações do Perfil de Seleção</h1>
                 <form>
-                    <label className="form-label">Nome do Pai⠀⠀</label>   
-                    <input
-                    type="text"
-                    id="first_level_parent"
-                    name="first_level_parent"
-                    />
+                    <label className="form-label">Nome</label> 
+                    <div style={{display: "flex"}}>  
+                        <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        />
+                    </div>
                     <br />
                     <br />
-                    <label className="form-label">Nome do Avô⠀⠀</label>    
-                    <input
-                    type="text"
-                    id="second_level_parent"
-                    name="second_level_parent"
-                    />
+                    <label className="form-label">PTA Leite</label>
+                    <div style={{display: "flex"}}>   
+                        <div style={{width: '100px'}}>
+                            <Select options={optionsSelect}/>
+                        </div>
+                        <input
+                        type="text"
+                        id="pta_leite"
+                        name="pta_leite"
+                        />
+                    </div>
+                    <br />
+                    <br />
+                    <label className="form-label">PTA Tipo</label> 
+                    <div style={{display: "flex"}}>
+                        <Select options={optionsSelect} />
+                        <input
+                        type="text"
+                        id="pta_tipo"
+                        name="pta_tipo"
+                        />
+                    </div>
+                    <br />
+                    <br />
+                    <label className="form-label">Indíce de Úbere</label>
+                    <div style={{display: "flex"}}>    
+                        <Select options={optionsSelect} />
+                        <input
+                        type="text"
+                        id="ind_ubere"
+                        name="ind_ubere"
+                        />
+                    </div>
+                    <br />
+                    <br />
+                    <label className="form-label">Indíce de Conformação</label>
+                    <div style={{display: "flex"}}>   
+                        <Select options={optionsSelect} /> 
+                        <input
+                        type="text"
+                        id="ind_conf"
+                        name="ind_conf"
+                        />
+                    </div>
+                    <br />
+                    <br />
+                    <label className="form-label">DPR</label> 
+                    <div style={{display: "flex"}}>   
+                        <Select options={optionsSelect} />
+                        <input
+                        type="text"
+                        id="dpr"
+                        name="dpr"
+                        />
+                    </div>
+                    <br />
+                    <br />
+                    <label className="form-label">Vida Produtiva</label>
+                    <div style={{display: "flex"}}> 
+                        <Select options={optionsSelect} />   
+                        <input
+                        type="text"
+                        id="vida_prod"
+                        name="vida_prod"
+                        />
+                    </div>
+                    <br />
+                    <br />
+                    <label className="form-label">Indíce de Composto de Pernas</label>
+                    <div style={{display: "flex"}}>    
+                        <Select options={optionsSelect} />
+                        <input
+                        type="text"
+                        id="ind_composto"
+                        name="ind_composto"
+                        />
+                    </div>
+                    <br />
+                    <br />
+                    <label className="form-label">Indicador de Beta Caseína</label>
+                    <div style={{display: "flex"}}>
+                        <Select options={optionsSelect} />
+                        <input
+                        type="checkbox"
+                        id="ind_beta"
+                        name="ind_beta"
+                        />
+                    </div>
+                    <br />
+                    <br />
+                    <label className="form-label">Consanguinidade</label>
+                    <div style={{display: "flex"}}>    
+                        <Select options={optionsSelect} />
+                        <input
+                        type="text"
+                        id="consang"
+                        name="consang"
+                        />
+                    <label className="form-label">%</label> 
+                    </div>
+                     
                 </form>
-                </div>
-                <div className="results">
-                <h1 className="grid-title">Resultados</h1>
-                <div className="table-wrapper">
-                    <table className="results-table">
-                    <thead>
-                        <tr>
-                        <th>Nome</th>
-                        <th>Nome do Pai</th>
-                        <th>Nome do Avô</th>
-                        <th>Nome do Bisavô</th>
-                        <th>PTA Leite</th>
-                        <th>PTA Tipo</th>
-                        <th>Índice de Úbere</th>
-                        <th>Índice de Conformação</th>
-                        <th>DPR</th>
-                        <th>Vida Produtiva</th>
-                        <th>Índice de Composto de Pernas</th>
-                        <th>Índice de Beta Caseína</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td>Dom</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        </tr>
-                        <tr className="active-row">
-                        <td>Melissa</td>
-                        <td>5150</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        </tr>
-                        <tr>
-                        <td>Dom</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        </tr>
-                        <tr>
-                        <td>Melissa</td>
-                        <td>5150</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        </tr>
-                        <tr>
-                        <td>Dom</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        </tr>
-                        <tr>
-                        <td>Melissa</td>
-                        <td>5150</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        <td>6000</td>
-                        </tr>
-                    </tbody>
-                    </table>
-                </div>
                 </div>
             </div>
         </div>
