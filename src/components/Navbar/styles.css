@@ -5,30 +5,27 @@ nav {
     width: 100vw;
     background-color: #2d2c29;
     display: flex;
-    position: fixed;
-    top: 0;
-    right: 0;
 }
 
-nav>.nav-logo>img {
+nav > .nav-logo > img {
     width: 100px;
     height: 100px;
     padding: 0px;
 }
 
-nav>.nav-links {
+nav > .nav-links {
     display: inline;
     font-family: 'Merriweather Sans', sans-serif;
     float: right;
-    font-size: 22px;
+    font-size: 18px;
 }
 
-nav>.nav-links>a {
+nav > .nav-links> a {
     display: inline-block;
     padding: 33px 10px 13px 10px;
     color: #f5e8ca;
 }
 
-nav>.nav-links>a:hover {
+nav > .nav-links > a:hover {
     color: #e3711a;
 }
