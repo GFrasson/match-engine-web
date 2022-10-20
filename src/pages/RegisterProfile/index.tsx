@@ -37,69 +37,75 @@ export function RegisterProfile() {
     ]
 
       
-    const onSubmit =  (event: FormEvent) => {
+    const onSubmit = async (event: FormEvent) => {
         event.preventDefault();
 
-        api.post("/selection-profile", {
-            name: nome,
-            forms: [
-                {
-                    profile_items: {
-                        productive_life: vidaProd
-                    },
-                    operator: operadorVidaProd
-                },
-                {
-                    profile_items: {
-                        conformation_index: indConf
-                    },
-                    operator: operadorIndConf
-                },
-                {
-                    profile_items: {
-                        consanguinity: consanguinidade
-                    },
-                    operator: operadorConsanguinidade
-                },
-                {
-                    profile_items: {
-                        ptat: ptaTipo
-                    },
-                    operator: operadorPtaTipo
-                },
-                {
-                    profile_items: {
-                        legs_composition: indCompPerna
-                    },
-                    operator: operadorIndCompPerna
-                },
-                {
-                    profile_items: {
-                        dpr: dpr
-                    },
-                    operator: operadorDpr
-                },
-                {
-                    profile_items: {
-                        beta_casein: indBetaCaseina ? 1 : 0
-                    },
-                    operator: '='
-                },
-                {
-                    profile_items: {
-                        udder_index: indUbere
-                    },
-                    operator: operadorIndUbere
-                },
-                {
-                    profile_items: {
-                        ptal: ptaLeite
-                    },
-                    operator: operadorPtaLeite
-                },
-            ]
-        })
+        try {
 
+            const response = await api.post("/selection-profile", {
+                name: nome,
+                forms: [
+                    {
+                        profile_items: {
+                            productive_life: vidaProd
+                        },
+                        operator: operadorVidaProd
+                    },
+                    {
+                        profile_items: {
+                            conformation_index: indConf
+                        },
+                        operator: operadorIndConf
+                    },
+                    {
+                        profile_items: {
+                            consanguinity: consanguinidade
+                        },
+                        operator: operadorConsanguinidade
+                    },
+                    {
+                        profile_items: {
+                            ptat: ptaTipo
+                        },
+                        operator: operadorPtaTipo
+                    },
+                    {
+                        profile_items: {
+                            legs_composition: indCompPerna
+                        },
+                        operator: operadorIndCompPerna
+                    },
+                    {
+                        profile_items: {
+                            dpr: dpr
+                        },
+                        operator: operadorDpr
+                    },
+                    {
+                        profile_items: {
+                            beta_casein: indBetaCaseina ? 1 : 0
+                        },
+                        operator: '='
+                    },
+                    {
+                        profile_items: {
+                            udder_index: indUbere
+                        },
+                        operator: operadorIndUbere
+                    },
+                    {
+                        profile_items: {
+                            ptal: ptaLeite
+                        },
+                        operator: operadorPtaLeite
+                    },
+                ]
+            })
+
+            alert('Perfil de seleção cadastrado com sucesso!')
+        } catch (e) {
+            alert('erro!')
+        }
     }
 
     return (
