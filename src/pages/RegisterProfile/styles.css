@@ -1,0 +1,22 @@
+.submitButton {
+    background-color: #e28242;
+    padding: 0.5rem 0.75rem;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    margin: 1rem 0rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submitButton:hover {
+    background-color: #ec965c;
+}
+
+.checkBoxBeta {
+    width: 30px;
+    height: 30px;
+    margin-left: 1rem;
+    margin-top: 5px;
+}
