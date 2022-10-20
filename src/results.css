@@ -23,16 +23,27 @@
 .grid-title {
     font-family: 'Merriweather Sans', sans-serif;
     color: #2d2c29;
+    font-size: 36px;
 }
 
 .form-label {
+    font-size: 22px;
     font-family: 'Lato', sans-serif;
     color: #2d2c29;
 }
 
+input[type=text] {
+    font-size: 22px;
+    background-color: white;
+    color: #2d2c29;
+    border-radius: 5px;
+    border: 1px solid #adadad;
+}
+
+
 /* AQUI A PARTE DE RESULTADOS */
 
-.table-wrapper{
+.table-wrapper {
     overflow: auto;
 }
 
